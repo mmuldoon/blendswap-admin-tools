@@ -3,17 +3,17 @@ import os
 import subprocess
 
 class AdminTools(bpy.types.Panel):
-	"""A Custom Panel in the Viewport Tollbar"""
+	"""A Custom Panel in the Viewport Toolbar"""
 	bl_label = "Admin Tools"
 	bl_space_type = "VIEW_3D"
 	bl_region_type = "TOOLS"
+	bl_category ='BSwap'
 
 	def draw(self, context):
 		layout = self.layout
 		
 		row = layout.row()
 		row.label(text="Test", icon='ERROR')
-		
 
 def register():
 	bpy.utils.register_class(AdminTools)
